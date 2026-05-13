@@ -49,6 +49,17 @@ with snippet_path.open('w', encoding='utf-8') as f:
         if isinstance(rule, str) and rule.startswith(('DOMAIN-SUFFIX', 'DOMAIN-KEYWORD', 'IP-CIDR', 'IP6-CIDR')):
             f.write(f'{rule}\n')
 
+# write Surge module file
+sgmodule_path = ROOT / 'WifCall.sgmodule'
+with sgmodule_path.open('w', encoding='utf-8') as f:
+    f.write('#!name=WiFi Calling Rules\n')
+    f.write('#!desc=Generated WiFi Calling rules for Surge\n')
+    f.write('# Generated from WifCall.yaml\n')
+    f.write('[Rule]\n')
+    for rule in rules:
+        if isinstance(rule, str) and rule.startswith(('DOMAIN-SUFFIX', 'DOMAIN-KEYWORD', 'IP-CIDR', 'IP6-CIDR')):
+            f.write(f'{rule}\n')
+
 # write Loon rule list
 loon_path = ROOT / 'WifCall-loon.txt'
 with loon_path.open('w', encoding='utf-8') as f:
@@ -58,4 +69,4 @@ with loon_path.open('w', encoding='utf-8') as f:
         if isinstance(rule, str):
             f.write(f'{rule}\n')
 
-print('Generated rule files: WifCall-universal.yaml, WifCall-clash.yaml, WifCall-plain.txt, WifCall.list, WifCall.snippet, WifCall-loon.txt')
+print('Generated rule files: WifCall-universal.yaml, WifCall-clash.yaml, WifCall-plain.txt, WifCall.list, WifCall.snippet, WifCall.sgmodule, WifCall-loon.txt')
