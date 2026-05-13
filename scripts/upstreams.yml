@@ -1,0 +1,18 @@
+# 上游规则源配置
+# 你可以在这里添加多个上游规则源，脚本会抓取并合并它们。
+#
+# 支持类型：
+#   yaml - 直接解析 YAML 文件，优先读取 root.rules 或根列表
+#   plain - 解析纯文本规则列表，支持 # 注释行
+#
+# 示例：
+# sources:
+#   - name: upstream-yaml
+#     url: https://raw.githubusercontent.com/example/wificall/main/WifCall.yaml
+#     type: yaml
+#     key: rules
+#   - name: upstream-txt
+#     url: https://example.com/rules.txt
+#     type: plain
+
+sources: []

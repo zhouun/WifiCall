@@ -17,9 +17,12 @@
 
 ## 3. 自动生成说明
 
-本仓库使用 `WifCall.yaml` 作为源文件，通过 `scripts/generate-rule-files.py` 生成其他专用格式文件。
+本仓库使用 `WifCall.yaml` 作为主规则源，并支持从上游配置抓取并合并：
 
-`.github/workflows/auto-update.yml` 会在 `main` 分支推送或每日定时运行时自动生成并提交这些派生文件。
+- `scripts/upstreams.yml`：配置上游规则源
+- `scripts/fetch-and-merge-upstreams.py`：抓取上游规则源并生成 `WifCall-merged.yaml`
+- `scripts/generate-rule-files.py`：从 `WifCall-merged.yaml`（如果存在）或 `WifCall.yaml` 生成其他客户端专用格式文件
+- `.github/workflows/auto-update.yml`：在 `main` 分支推送或每日定时运行时自动抓取、生成并提交更新
 
 ## 4. Android 客户端
 

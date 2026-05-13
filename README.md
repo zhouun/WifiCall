@@ -25,8 +25,9 @@
 
 本仓库包含 GitHub Actions 自动生成流程：
 
-- `scripts/generate-rule-files.py`：从 `WifCall.yaml` 生成 `WifCall-universal.yaml`、`WifCall-clash.yaml`、`WifCall-plain.txt`、`WifCall-loon.txt`
-- `.github/workflows/auto-update.yml`：在 `main` 分支推送或按计划运行时自动生成并推送更新
+- `scripts/fetch-and-merge-upstreams.py`：从 `scripts/upstreams.yml` 中的上游源抓取规则并生成 `WifCall-merged.yaml`
+- `scripts/generate-rule-files.py`：从 `WifCall-merged.yaml`（如果存在）或 `WifCall.yaml` 生成 `WifCall-universal.yaml`、`WifCall-clash.yaml`、`WifCall-plain.txt`、`WifCall-loon.txt`
+- `.github/workflows/auto-update.yml`：在 `main` 分支推送或按计划运行时自动抓取、生成并推送更新
 
 ## 平台使用说明
 

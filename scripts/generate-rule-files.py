@@ -3,7 +3,8 @@ import pathlib
 import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SOURCE = ROOT / 'WifCall.yaml'
+MERGED_SOURCE = ROOT / 'WifCall-merged.yaml'
+SOURCE = MERGED_SOURCE if MERGED_SOURCE.exists() else ROOT / 'WifCall.yaml'
 
 with SOURCE.open('r', encoding='utf-8') as f:
     data = yaml.safe_load(f)
