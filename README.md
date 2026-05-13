@@ -21,6 +21,13 @@
 - `WifCall-loon.txt`：Loon 专用规则列表，适用于 Loon iOS / Loon macOS。
 - `WifCall-universal.yaml`：标准 YAML 规则文件，适用于支持 YAML 导入的客户端。
 
+## 自动生成和更新
+
+本仓库包含 GitHub Actions 自动生成流程：
+
+- `scripts/generate-rule-files.py`：从 `WifCall.yaml` 生成 `WifCall-universal.yaml`、`WifCall-clash.yaml`、`WifCall-plain.txt`、`WifCall-loon.txt`
+- `.github/workflows/auto-update.yml`：在 `main` 分支推送或按计划运行时自动生成并推送更新
+
 ## 平台使用说明
 
 详见 `USAGE.md`，其中包含每种客户端的导入方式和配置提示。

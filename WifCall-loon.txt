@@ -1,11 +1,11 @@
-# Loon 专用规则列表
-# 适用于 Loon iOS / Loon macOS
-DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,WiFiCall
-DOMAIN-SUFFIX,gspe2-ssl.ls.apple.com,WiFiCall
+# Generated from WifCall.yaml
+# Suitable for Loon iOS / Loon macOS
 DOMAIN-KEYWORD,epdg,WiFiCall
 DOMAIN-KEYWORD,epdg.epc,WiFiCall
 DOMAIN-KEYWORD,epdg.mnc,WiFiCall
 DOMAIN-SUFFIX,pub.3gppnetwork.org,WiFiCall
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,WiFiCall
+DOMAIN-SUFFIX,gspe2-ssl.ls.apple.com,WiFiCall
 DOMAIN-KEYWORD,epdg.epc.mnc030.mcc234,WiFiCall
 DOMAIN-KEYWORD,epdg.epc.mnc033.mcc234,WiFiCall
 IP-CIDR,31.94.0.0/16,WiFiCall,no-resolve
