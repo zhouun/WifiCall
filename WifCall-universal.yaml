@@ -1,0 +1,66 @@
+rules:
+  # =========================================
+  # 全平台通用 WiFi Calling 规则
+  # =========================================
+  # 适用于 Android、iOS、Windows、macOS、Linux 客户端
+  # 支持 Clash / Surge / Quantumult X / Shadowrocket / V2RayN 等规则引擎
+
+  # Apple iOS 设备资格审查
+  - 'DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,WiFiCall'
+  - 'DOMAIN-SUFFIX,gspe2-ssl.ls.apple.com,WiFiCall'
+
+  # 通用 ePDG 关键字规则
+  - 'DOMAIN-KEYWORD,epdg,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.mnc,WiFiCall'
+  - 'DOMAIN-SUFFIX,pub.3gppnetwork.org,WiFiCall'
+
+  # 英国 (UK)
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc030.mcc234,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc033.mcc234,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc015.mcc234,WiFiCall'
+  - 'DOMAIN-SUFFIX,entsrv-uk.vodafone.com,WiFiCall'
+  - 'DOMAIN-SUFFIX,vuk-gto.prod.ondemandconnectivity.com,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc020.mcc234,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc010.mcc234,WiFiCall'
+
+  # 美国 (US)
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc240.mcc310,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc260.mcc310,WiFiCall'
+  - 'DOMAIN-SUFFIX,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc410.mcc310,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc150.mcc311,WiFiCall'
+  - 'DOMAIN-SUFFIX,attwifi.com,WiFiCall'
+  - 'DOMAIN-SUFFIX,att.com,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc480.mcc311,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc012.mcc311,WiFiCall'
+  - 'DOMAIN-SUFFIX,vzwwo.com,WiFiCall'
+
+  # 香港 (HK)
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc000.mcc454,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc003.mcc454,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc004.mcc454,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc006.mcc454,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc017.mcc454,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc012.mcc454,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc013.mcc454,WiFiCall'
+
+  # 新加坡 (SG)
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc001.mcc525,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc002.mcc525,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc005.mcc525,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc003.mcc525,WiFiCall'
+
+  # 新西兰 (NZ)
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc005.mcc530,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc024.mcc530,WiFiCall'
+
+  # IMS / VoWiFi 通用规则
+  - 'DOMAIN-SUFFIX,ims.apple.com,WiFiCall'
+  - 'DOMAIN-SUFFIX,ims.att.net,WiFiCall'
+  - 'DOMAIN-SUFFIX,ims.vzw.com,WiFiCall'
+  - 'DOMAIN-SUFFIX,ims.t-mobile.com,WiFiCall'
+
+  # 全局兜底规则
+  - 'DOMAIN-SUFFIX,3gppnetwork.org,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mcc,WiFiCall'

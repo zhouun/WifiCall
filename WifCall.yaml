@@ -1,0 +1,99 @@
+rules:
+  # =========================================
+  # 0. 全平台通用 WiFi Calling 规则
+  # =========================================
+  # Android / iOS / 其他设备通用 ePDG 关键字匹配
+  - 'DOMAIN-KEYWORD,epdg,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.mnc,WiFiCall'
+  - 'DOMAIN-SUFFIX,pub.3gppnetwork.org,WiFiCall'
+
+  # =========================================
+  # 1. Apple iOS 设备资格审查
+  # =========================================
+  - 'DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,WiFiCall'
+  - 'DOMAIN-SUFFIX,gspe2-ssl.ls.apple.com,WiFiCall'
+
+  # =========================================
+  # 2. 🇬🇧 英国 (UK) - MCC: 234
+  # =========================================
+  # EE / CMLink UK / BT Mobile
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc030.mcc234,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc033.mcc234,WiFiCall'
+  - 'IP-CIDR,31.94.0.0/16,WiFiCall,no-resolve'
+  - 'IP-CIDR,46.68.0.0/17,WiFiCall,no-resolve'
+  # Vodafone / Lebara UK
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc015.mcc234,WiFiCall'
+  - 'DOMAIN-SUFFIX,entsrv-uk.vodafone.com,WiFiCall'
+  - 'DOMAIN-SUFFIX,vuk-gto.prod.ondemandconnectivity.com,WiFiCall'
+  - 'IP-CIDR,88.82.0.0/19,WiFiCall,no-resolve'
+  # Three UK / Smarty
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc020.mcc234,WiFiCall'
+  # O2 / Giffgaff
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc010.mcc234,WiFiCall'
+  - 'IP-CIDR,87.194.0.0/16,WiFiCall,no-resolve'
+
+  # =========================================
+  # 3. 🇺🇸 美国 (US) - MCC: 310 / 311 / 312
+  # =========================================
+  # T-Mobile US / Ultra Mobile / PayGo
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc240.mcc310,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc260.mcc310,WiFiCall'
+  - 'DOMAIN-SUFFIX,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org,WiFiCall'
+  - 'IP-CIDR,208.54.0.0/16,WiFiCall,no-resolve'
+  - 'IP-CIDR,66.94.0.0/19,WiFiCall,no-resolve'
+  # AT&T
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc410.mcc310,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc150.mcc311,WiFiCall'
+  - 'DOMAIN-SUFFIX,attwifi.com,WiFiCall'
+  - 'DOMAIN-SUFFIX,att.com,WiFiCall'
+  # Verizon
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc480.mcc311,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc012.mcc311,WiFiCall'
+  - 'DOMAIN-SUFFIX,vzwwo.com,WiFiCall'
+
+  # =========================================
+  # 4. 🇭🇰 香港 (HK) - MCC: 454
+  # =========================================
+  # CSL / ClubSIM
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc000.mcc454,WiFiCall'
+  # 3HK / DIY SIM
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc003.mcc454,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc004.mcc454,WiFiCall'
+  # SmarTone
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc006.mcc454,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc017.mcc454,WiFiCall'
+  # CMHK
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc012.mcc454,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc013.mcc454,WiFiCall'
+
+  # =========================================
+  # 5. 🇸🇬 新加坡 (SG) - MCC: 525
+  # =========================================
+  # Singtel
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc001.mcc525,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc002.mcc525,WiFiCall'
+  # StarHub
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc005.mcc525,WiFiCall'
+  # M1
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc003.mcc525,WiFiCall'
+
+  # =========================================
+  # 6. 新西兰 (NZ) - MCC: 530
+  # =========================================
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc005.mcc530,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mnc024.mcc530,WiFiCall'
+
+  # =========================================
+  # 7. 其他通用/运营商特定 IMS 与 VoWiFi 规则
+  # =========================================
+  - 'DOMAIN-SUFFIX,ims.apple.com,WiFiCall'
+  - 'DOMAIN-SUFFIX,ims.att.net,WiFiCall'
+  - 'DOMAIN-SUFFIX,ims.vzw.com,WiFiCall'
+  - 'DOMAIN-SUFFIX,ims.t-mobile.com,WiFiCall'
+
+  # =========================================
+  # 8. 全局兜底规则
+  # =========================================
+  - 'DOMAIN-SUFFIX,3gppnetwork.org,WiFiCall'
+  - 'DOMAIN-KEYWORD,epdg.epc.mcc,WiFiCall'
