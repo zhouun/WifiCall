@@ -18,6 +18,8 @@
 
 - `WifCall-clash.yaml`：Clash 家族专用，适用于 Clash、ClashX、Clash for Windows、Clash for Android、Clash Premium 等客户端。
 - `WifCall-plain.txt`：通用规则列表，适用于 Surge、Shadowrocket、Quantumult X、Quantumult、V2RayN、Qv2ray、Egeran 以及其他支持标准规则列表的客户端。
+- `WifCall.list`：标准 `.list` 规则文件，可直接用于支持 `.list` 的客户端或订阅系统。
+- `WifCall.snippet`：规则片段文件，适用于 Surge / Shadowrocket / Loon 等支持片段导入的客户端。
 - `WifCall-loon.txt`：Loon 专用规则列表，适用于 Loon iOS / Loon macOS。
 - `WifCall-universal.yaml`：标准 YAML 规则文件，适用于支持 YAML 导入的客户端。
 

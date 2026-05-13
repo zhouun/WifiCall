@@ -32,6 +32,23 @@ with plain_path.open('w', encoding='utf-8') as f:
         if isinstance(rule, str):
             f.write(f'{rule}\n')
 
+# write .list rule file
+list_path = ROOT / 'WifCall.list'
+with list_path.open('w', encoding='utf-8') as f:
+    f.write('# Generated from WifCall.yaml\n')
+    for rule in rules:
+        if isinstance(rule, str):
+            f.write(f'{rule}\n')
+
+# write Surge/Loon snippet file
+snippet_path = ROOT / 'WifCall.snippet'
+with snippet_path.open('w', encoding='utf-8') as f:
+    f.write('# Generated from WifCall.yaml\n')
+    f.write('[Rule]\n')
+    for rule in rules:
+        if isinstance(rule, str) and rule.startswith(('DOMAIN-SUFFIX', 'DOMAIN-KEYWORD', 'IP-CIDR', 'IP6-CIDR')):
+            f.write(f'{rule}\n')
+
 # write Loon rule list
 loon_path = ROOT / 'WifCall-loon.txt'
 with loon_path.open('w', encoding='utf-8') as f:
@@ -41,4 +58,4 @@ with loon_path.open('w', encoding='utf-8') as f:
         if isinstance(rule, str):
             f.write(f'{rule}\n')
 
-print('Generated rule files: WifCall-universal.yaml, WifCall-clash.yaml, WifCall-plain.txt, WifCall-loon.txt')
+print('Generated rule files: WifCall-universal.yaml, WifCall-clash.yaml, WifCall-plain.txt, WifCall.list, WifCall.snippet, WifCall-loon.txt')
