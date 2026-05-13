@@ -24,11 +24,26 @@ def fetch_url(url):
 
 def parse_plain_text(text):
     rules = []
+    allowed_prefixes = (
+        'DOMAIN-SUFFIX',
+        'DOMAIN-KEYWORD',
+        'DOMAIN',
+        'IP-CIDR',
+        'IP6-CIDR',
+        'SRC-PORT',
+        'DST-PORT',
+        'GEOIP',
+        'PROCESS-NAME',
+        'USER-AGENT',
+        'URL-REGEX',
+        'FINAL',
+    )
     for line in text.splitlines():
         line = line.strip()
-        if not line or line.startswith('#'):
+        if not line or line.startswith('#') or (line.startswith('[') and line.endswith(']')):
             continue
-        rules.append(line)
+        if any(line.startswith(prefix) for prefix in allowed_prefixes):
+            rules.append(line)
     return rules
 
 

@@ -15,4 +15,16 @@
 #     url: https://example.com/rules.txt
 #     type: plain
 
-sources: []
+sources:
+  - name: t-mobile-wifi-calling
+    url: https://raw.githubusercontent.com/zrt02/T-mobile-wifi-calling-rules/main/T-Mobile.yaml
+    type: yaml
+  - name: openclash-apple-check
+    url: https://raw.githubusercontent.com/supermiillk/openclash_private/main/WifiCalling-Rules/apple-check.yaml
+    type: yaml
+  - name: openclash-esim-us
+    url: https://raw.githubusercontent.com/supermiillk/openclash_private/main/WifiCalling-Rules/esim-us.yaml
+    type: yaml
+  - name: surge-wificalling
+    url: https://raw.githubusercontent.com/DylanSmith025/WiFicalling_SurgeModule/main/Wi-Fi%20calling.sgmodule
+    type: plain

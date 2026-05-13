@@ -24,6 +24,13 @@
 - `scripts/generate-rule-files.py`：从 `WifCall-merged.yaml`（如果存在）或 `WifCall.yaml` 生成其他客户端专用格式文件
 - `.github/workflows/auto-update.yml`：在 `main` 分支推送或每日定时运行时自动抓取、生成并提交更新
 
+当前配置的上游源：
+
+- `https://raw.githubusercontent.com/zrt02/T-mobile-wifi-calling-rules/main/T-Mobile.yaml`
+- `https://raw.githubusercontent.com/supermiillk/openclash_private/main/WifiCalling-Rules/apple-check.yaml`
+- `https://raw.githubusercontent.com/supermiillk/openclash_private/main/WifiCalling-Rules/esim-us.yaml`
+- `https://raw.githubusercontent.com/DylanSmith025/WiFicalling_SurgeModule/main/Wi-Fi%20calling.sgmodule`
+
 ## 4. Android 客户端
 
 ## 3. Android 客户端
