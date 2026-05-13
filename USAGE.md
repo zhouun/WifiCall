@@ -14,6 +14,7 @@
 - `WifCall-plain.txt`：通用规则列表，适用于 Surge、Shadowrocket、Quantumult X、Quantumult、V2RayN、Qv2ray、Loon、Egeran 以及其他支持标准规则列表的客户端。
 - `WifCall.list`：标准 `.list` 规则文件，可直接用于支持 `.list` 的客户端或订阅系统。
 - `WifCall.snippet`：规则片段文件，适用于 Surge / Shadowrocket / Loon 等支持片段导入的客户端。
+- `WifCall.sgmodule`：Surge 模块文件，适用于 Surge iOS / Surge macOS，支持模块化导入。
 - `WifCall-loon.txt`：Loon 专用规则列表，适用于 Loon iOS / Loon macOS。
 - `WifCall-universal.yaml`：标准 YAML 规则文件，适用于支持 YAML 导入的客户端。
 
@@ -92,7 +93,14 @@
 
 1. 打开 Surge，进入 `配置` -> `模块`。
 2. 在 `规则` 部分导入或粘贴 `WifCall-plain.txt`。
-3. 确保你的 Surge 配置内存在 `WiFiCall` 代理组，并将此规则文件与该组关联。
+3. 或者导入 `WifCall.sgmodule` 作为模块文件。
+4. 确保你的 Surge 配置内存在 `WiFiCall` 代理组，并将此规则文件与该组关联。
+
+### Surge macOS
+
+1. 打开 Surge for macOS，进入 `配置` -> `模块`。
+2. 导入 `WifCall.sgmodule` 模块文件。
+3. 确认 `WiFiCall` 代理组已配置，并与规则绑定。
 
 ### 其他 iOS 客户端
 
